@@ -23,7 +23,7 @@ resource "kubernetes_manifest" "argocd_app" {
     kind       = "Application"
 
     metadata = {
-      name      = "task-manager-${var.namespace}"
+      name      = "${var.namespace}"
       namespace = "argocd"
     }
 
